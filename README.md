@@ -8,7 +8,10 @@ The easiest way to obtain Wobot is through [npm](http://npmjs.org/):
 
     npm install wobot
 
-Keep in mind this module depends on `node-xmpp` which cannot be built without [libexpat1-dev](http://packages.debian.org/search?keywords=libexpat1-dev).
+Keep in mind this module depends on `node-xmpp` which cannot be built without:
+
+ - libexpat1-dev: `apt-get install libexpat1-dev`
+ - libicu-dev: `apt-get install libicu-dev`
 
 # Legal stuff
 
