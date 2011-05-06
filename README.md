@@ -10,7 +10,7 @@ The easiest way to obtain Wobot is through [npm](http://npmjs.org/):
 
 Keep in mind this module depends on `node-xmpp` which cannot be built without [libexpat1-dev](http://packages.debian.org/search?keywords=libexpat1-dev).
 
-# Mentions
+# Legal stuff
 
 Copyright (c) 2011 Christian Joudrey. See LICENSE for details.
 
