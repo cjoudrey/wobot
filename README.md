@@ -4,7 +4,11 @@ A plugin-based HipChat bot written in Node.js.
 
 # Obtaining Wobot
 
-TODO
+The easiest way to obtain Wobot is through [npm](http://npmjs.org/):
+
+  npm install wobot
+
+Keep in mind this module depends on `node-xmpp` which cannot be built without [libexpat1-dev](http://packages.debian.org/search?keywords=libexpat1-dev).
 
 # Mentions
 
