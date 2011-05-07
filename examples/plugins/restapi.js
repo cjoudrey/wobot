@@ -1,5 +1,5 @@
 var http = require('http');
-var qs = require('qs');
+var qs = require('querystring');
 var server;
 
 module.exports.load = function(bot, options) {
