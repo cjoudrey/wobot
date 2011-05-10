@@ -39,52 +39,52 @@ The `wobot.Bot` object extends Node's [EventEmitter](http://nodejs.org/docs/v0.4
 
 The following events are emitted:
 
-**connect()**
+## connect()
 Emitted whenever the bot connects to the server.
 
-**message(channel, from, message)**
+## message(channel, from, message)
 Emitted whenever a message is sent to a channel the bot is in.
 
-**pm(from, message)**
+## pm(from, message)
 Emitted whenever a message is sent privately to the bot.
 
-**pong()**
+## pong()
 Emitted everytime the bot pings the server (roughly every 30 seconds.)
 
-**disconnect()**
+## disconnect()
 Emitted whenever the bot disconnects from the server.
 
 # Public API
 
 Instances of `wobot.Bot` have the following methods:
 
-**join(roomJid)**
+## join(roomJid)
 Join a channel.
  - `roomJid` is in the following format: `????_????@conf.hipchat.com`.
 
-**part(roomJid)**
+## part(roomJid)
 Part a channel.
 
-**message(roomJid, message)**
+## message(roomJid, message)
 Send a public message to the channel.
 
-**pm(jid, message)**
+## pm(jid, message)
 Send a private message to a user.
  - `jid` is in the following format: `????_????@chat.hipchat.com`.
 
-**connect()**
+## connect()
 Connect to the server.
 
-**disconnect()**
+## disconnect()
 Disconnect from the server.
 
-**loadPlugin(identifier, plugin, options)**
+## loadPlugin(identifier, plugin, options)
 Load a plugin.
  - `identifier`: A unique string that identifies the plugin. This will be used to unload it.
  - `plugin`: Plugin can either be an object or the path to the plugin.
  - `options`: Will be passed as the second argument to `load`.
 
-**unloadPlugin(identifier)**
+## unloadPlugin(identifier)
 Unload a plugin.
 This essentially calls the `unload` function of the plugin.
 
