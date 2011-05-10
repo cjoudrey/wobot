@@ -60,6 +60,7 @@ Instances of `wobot.Bot` have the following methods:
 
 ## join(roomJid)
 Join a channel.
+
  - `roomJid` is in the following format: `????_????@conf.hipchat.com`.
 
 ## part(roomJid)
@@ -70,6 +71,7 @@ Send a public message to the channel.
 
 ## pm(jid, message)
 Send a private message to a user.
+
  - `jid` is in the following format: `????_????@chat.hipchat.com`.
 
 ## connect()
@@ -80,13 +82,13 @@ Disconnect from the server.
 
 ## loadPlugin(identifier, plugin, options)
 Load a plugin.
+
  - `identifier`: A unique string that identifies the plugin. This will be used to unload it.
  - `plugin`: Plugin can either be an object or the path to the plugin.
  - `options`: Will be passed as the second argument to `load`.
 
 ## unloadPlugin(identifier)
-Unload a plugin.
-This essentially calls the `unload` function of the plugin.
+Unload a plugin. This essentially calls the `unload` function of the plugin.
 
 # Legal stuff
 
