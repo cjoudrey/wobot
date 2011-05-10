@@ -1,2 +1,4 @@
 examples
 *.md
+.npmignore
+.gitignore
