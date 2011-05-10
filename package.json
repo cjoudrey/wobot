@@ -10,7 +10,8 @@
     "url":"git://github.com/cjoudrey/wobot"
   },
   "dependencies": {
-    "node-xmpp": "0.2.6"
+    "node-xmpp": "0.2.6",
+    "underscore": "1.1.6"
   },
   "main": "lib/index.js",
   "engines": {
