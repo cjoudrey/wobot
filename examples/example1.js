@@ -30,7 +30,7 @@ b.on('message', function(channel, from, message) {
 });
 
 b.on('pm', function(jid, message) {
-  console.log(' -=- > ' jid + ' pm\'d: ' + message);
+  console.log(' -=- > ' + jid + ' pm\'d: ' + message);
 });
 
 process.on('uncaughtException', function (err) {
