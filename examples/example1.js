@@ -25,6 +25,10 @@ b.on('disconnect', function() {
   console.log(' -=- > Disconnect');
 });
 
+b.on('error', function(error, stanza) {
+  console.log(' -=- > Error: ' + error);
+});
+
 b.on('message', function(channel, from, message) {
   console.log(' -=- > ' + from + '@' + channel + ' said: ' + message);
 });
