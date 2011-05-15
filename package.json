@@ -1,6 +1,6 @@
 {
   "name": "wobot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A plugin-based HipChat bot.",
   "keywords": ["bot", "hipchat"],
   "homepage": "http://github.com/cjoudrey/wobot",
