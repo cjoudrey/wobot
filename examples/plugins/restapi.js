@@ -53,14 +53,8 @@ module.exports.load = function(bot, options) {
           res.end();
 
         case 'message':
-          if (!data.roomJid || !data.message) return httpErr(400);
-          bot.message(data.roomJid, data.message);
-          res.end();
-          break;
-
-        case 'pm':
-          if (!data.jid || !data.message) return httpErr(400);
-          bot.pm(data.jid, data.message);
+          if (!data.message || !data.targetJid) return httpErr(400);
+          bot.message(data.targetJid, data.message);
           res.end();
           break;
       }

@@ -6,16 +6,10 @@ var http = require('http');
 var bind = require('underscore').bind;
 
 module.exports.load = function(bot) {
-  bot.on('message', onMessage);
-};
-
-module.exports.unload = function(bot) {
-  bot.removeListener('message', onMessage);
+  bot.onMessage('!chuck', onMessage);
 };
 
 var onMessage = function(channel, from, message) {
-  if (!message.match(/^\!chuck$/i)) return false;
-
   var self = this;
 
   var options = {

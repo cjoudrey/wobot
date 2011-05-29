@@ -5,17 +5,10 @@
 var http = require('http');
 
 module.exports.load = function(bot) {
-  bot.on('message', onMessage);
+  bot.onMessage(/^\!weather ([0-9]+)$/i, onMessage);
 };
 
-module.exports.unload = function(bot) {
-  bot.removeListener('message', onMessage);
-};
-
-var onMessage = function(channel, from, message) {
-  var matches = message.match(/^\!weather ([0-9]+)$/i);
-  if (!matches) return false;
-
+var onMessage = function(channel, from, message, matches) {
   var self = this;
 
   var options = {
