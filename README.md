@@ -35,29 +35,38 @@ bot.connect();
 
 # Events
 
-The `wobot.Bot` object extends Node's [EventEmitter](http://nodejs.org/docs/v0.4.7/api/all.html#events.EventEmitter).
+The following events can be binded to:
 
-The following events are emitted:
-
-## connect()
+## onConnect(callback)
 Emitted whenever the bot connects to the server.
 
-## message(channel, from, message)
+## onMessage(condition, callback)
 Emitted whenever a message is sent to a channel the bot is in.
 
-## pm(from, message)
+ - `condition` is either a RegExp or a string which must match the message for the callback to be triggered.
+ - `callback` in the form of `function(channel, from, message[, matches])`.
+
+`condition` can also be omitted i.e. `onMessage(callback)`.
+
+## onPrivateMessage(condition, callback)
 Emitted whenever a message is sent privately to the bot.
 
-## pong()
+ - `condition` is either a RegExp or a string which must match the message for the callback to be triggered.
+ - `callback` in the form of `function(from, message[, matches])`.
+
+`condition` can also be omitted i.e. `onPrivateMessage(callback)`.
+
+## onPing(callback)
 Emitted everytime the bot pings the server (roughly every 30 seconds.)
 
-## error(message, stanza)
+## onError(callback)
 Emitted whenever an error occurs. `disconnect` will be emitted afterwards.
 
- - `message` is a string representation of the error.
- - `stanza` is an instance of `xmpp.Element`, when available.
+ - `callback` in the form of `function(message[, stanza])`
+   - `message` is a string representation of the error.
+   - `stanza` is an instance of `xmpp.Element`, when available.
 
-## disconnect()
+## disconnect(callback)
 Emitted whenever the bot disconnects from the server.
 
 # Public API
@@ -72,13 +81,12 @@ Join a channel.
 ## part(roomJid)
 Part a channel.
 
-## message(roomJid, message)
-Send a public message to the channel.
+## message(targetJid, message)
+Send a message to either a channel or a user.
 
-## pm(jid, message)
-Send a private message to a user.
-
- - `jid` is in the following format: `????_????@chat.hipchat.com`.
+ - `targetJid` is in the following format:
+   - `????_????@chat.hipchat.com` for a private message.
+   - `????_????@conf.hipchat.com` for a channel message.
 
 ## connect()
 Connect to the server.
