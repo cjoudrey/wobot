@@ -90,7 +90,7 @@ Disconnect from the server.
 Load a plugin.
 
  - `identifier`: A unique string that identifies the plugin. This will be used to unload it.
- - `plugin`: Plugin can either be an object or the path to the plugin.
+ - `plugin`: Object with a `load` function as so: `function load (bot)`.
  - `options`: Will be passed as the second argument to `load`.
 
 ## unloadPlugin(identifier)
