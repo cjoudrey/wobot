@@ -66,7 +66,7 @@ Emitted whenever an error occurs. `disconnect` will be emitted afterwards.
    - `message` is a string representation of the error.
    - `stanza` is an instance of `xmpp.Element`, when available.
 
-## disconnect(callback)
+## onDisconnect(callback)
 Emitted whenever the bot disconnects from the server.
 
 # Public API
