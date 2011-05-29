@@ -12,28 +12,28 @@ b.loadPlugin('chuckjokes', require('./plugins/chuckjokes'));
 b.loadPlugin('weather', require('./plugins/weather'));
 b.connect();
 
-b.on('connect', function() {
+b.onConnect(function() {
   console.log(' -=- > Connect');
   this.join('????_????@conf.hipchat.com');
 });
 
-b.on('pong', function() {
+b.onPing(function() {
   console.log(' -=- > Ping? Pong!');
 });
 
-b.on('disconnect', function() {
+b.onDisconnect(function() {
   console.log(' -=- > Disconnect');
 });
 
-b.on('error', function(error, stanza) {
+b.onError(function(error, stanza) {
   console.log(' -=- > Error: ' + error);
 });
 
-b.on('message', function(channel, from, message) {
+b.onMessage(function(channel, from, message) {
   console.log(' -=- > ' + from + '@' + channel + ' said: ' + message);
 });
 
-b.on('pm', function(jid, message) {
+b.onPrivateMessage(function(jid, message) {
   console.log(' -=- > ' + jid + ' pm\'d: ' + message);
 });
 
