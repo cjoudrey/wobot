@@ -1,3 +1,11 @@
+0.3.0 / 2011-05-29
+==================
+
+  * New events API with RegExp support.
+  * `Bot.pm` has been replaced with `Bot.message`.
+  * `Bot.unloadPlugin` has been removed.
+  * Updated `node-xmpp` to 0.2.7 for Node 0.4.8 support.
+
 0.2.0 / 2011-05-15
 ==================
 
