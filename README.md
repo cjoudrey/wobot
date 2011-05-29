@@ -93,9 +93,6 @@ Load a plugin.
  - `plugin`: Object with a `load` function as so: `function load (bot)`.
  - `options`: Will be passed as the second argument to `load`.
 
-## unloadPlugin(identifier)
-Unload a plugin. This essentially calls the `unload` function of the plugin.
-
 # Legal stuff
 
 Copyright (c) 2011 Christian Joudrey. See LICENSE for details.
