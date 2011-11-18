@@ -20,6 +20,7 @@ Instantiate the `wobot.Bot` class by passing it a hash containing:
   - `jid`: Jabber ID followed by `/bot`
   - `password`: The account's password
   - `name`: The name of the bot as it appears in HipChat. This is usually `firstname + lastname[0]`.
+  - Optional `host`: The hostname of the server.
 
 ```javascript
 var wobot = require('wobot');
@@ -88,6 +89,24 @@ Send a message to either a channel or a user.
    - `????_????@chat.hipchat.com` for a private message.
    - `????_????@conf.hipchat.com` for a channel message.
 
+## getRoster(callback)
+
+Fetches the roster (buddy list).
+
+ - `callback` in the form of `function(err, roster, stanza)`
+   - `err` is a string representation of the error, if any.
+   - `roster` is an array of objects containing user data.
+   - `stanza` is the full response stanza, an `xmpp.Element`.
+
+Example return value for `roster`:
+
+```json
+[
+  { name: 'Christian Joudrey', jid: '1111_12345@chat.hipchat.com' },
+  { name: 'The Bot', jid: '1111_12346@chat.hipchat.com' }
+]
+```
+
 ## connect()
 Connect to the server.
 
@@ -100,6 +119,15 @@ Load a plugin.
  - `identifier`: A unique string that identifies the plugin. This will be used to unload it.
  - `plugin`: Object with a `load` function as so: `function load (bot)`.
  - `options`: Will be passed as the second argument to `load`.
+
+## sendIq(stanza, callback)
+
+Sends an IQ stanza and stores a callback to be called when its response is received.
+
+ - `stanza` is the `xmpp.Element` to send.
+ - `callback` in the form of `function (err, stanza)`.
+   - `err` is a string representation of the error, if any.
+   - `stanza` is the full response stanza, an `xmpp.Element`.
 
 # Legal stuff
 
