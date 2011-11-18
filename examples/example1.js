@@ -1,5 +1,4 @@
 var Bot = require('../lib/').Bot;
-var http = require('http');
 
 var b = new Bot({
   debug: true,
