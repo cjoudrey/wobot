@@ -18,9 +18,7 @@ b.onConnect(function() {
   this.join('????_????@conf.hipchat.com');
 
   // fetch and print roster contacts (buddy list) as an IQ get/response example
-  var stanza = new xmpp.Element('iq', { type: 'get' })
-               .c('query', { xmlns: 'jabber:iq:roster' });
-  this.sendIq(stanza, function(result) {
+  this.getRoster(function(result) {
     result.getChild('query').getChildren('item').map(function(el) {
       console.log('Contact: '+el.attrs.name+' ('+ el.attrs.jid + ')');
     });
