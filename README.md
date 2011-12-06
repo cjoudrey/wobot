@@ -19,15 +19,13 @@ Instantiate the `wobot.Bot` class by passing it a hash containing:
 
   - `jid`: Jabber ID followed by `/bot`
   - `password`: The account's password
-  - `name`: The name of the bot as it appears in HipChat. This is usually `firstname + lastname[0]`.
 
 ```javascript
 var wobot = require('wobot');
 
 var bot = new wobot.Bot({
   jid: '????_????@chat.hipchat.com/bot',
-  password: '??????',
-  name: '???? ????'
+  password: '??????'
 });
 
 bot.connect();
