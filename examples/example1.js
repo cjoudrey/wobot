@@ -17,10 +17,14 @@ b.onConnect(function() {
   console.log(' -=- > Connect');
   this.join('????_????@conf.hipchat.com');
 
-  // fetch and print roster contacts (buddy list) as an IQ get/response example
-  this.getRoster(function(result) {
-    result.getChild('query').getChildren('item').map(function(el) {
-      console.log('Contact: '+el.attrs.name+' ('+ el.attrs.jid + ')');
+  // fetch and print roster contacts (buddy list)
+  this.getRoster(function(err, items, stanza) {
+    if (err) {
+      console.log(' -=- > Error getting roster: ' + err);
+      return;
+    }
+    items.forEach(function(item) {
+      console.log(' -=- > Roster contact: ' + item.name);
     });
   });
 });
