@@ -1,3 +1,10 @@
+0.4.0 / 2011-12-06
+==================
+
+  * Added `Bot.getRoster` to obtain the bot's buddy list. (Pull Req. #15 by Garret Heaton)
+  * Added `Bot.sendIq` to send an IQ stanza. (Pull Req. #15 by Garret Heaton)
+  * XMPP `host` can now be explicitly set in `wobot.Bot`. (Pull Req. #14 by Garret Heaton)
+
 0.3.1 / 2011-11-09
 ==================
 
