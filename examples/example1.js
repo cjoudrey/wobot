@@ -15,6 +15,17 @@ b.connect();
 b.onConnect(function() {
   console.log(' -=- > Connect');
   this.join('????_????@conf.hipchat.com');
+
+  // fetch and print roster contacts (buddy list)
+  this.getRoster(function(err, items, stanza) {
+    if (err) {
+      console.log(' -=- > Error getting roster: ' + err);
+      return;
+    }
+    items.forEach(function(item) {
+      console.log(' -=- > Roster contact: ' + item.name);
+    });
+  });
 });
 
 b.onPing(function() {
