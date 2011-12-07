@@ -1,6 +1,5 @@
 var Bot = require('../lib/').Bot;
 var http = require('http');
-var xmpp = require('node-xmpp');
 
 var b = new Bot({
   debug: true,
