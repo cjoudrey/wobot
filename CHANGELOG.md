@@ -1,3 +1,11 @@
+0.5.0 / 2011-12-10
+==================
+
+  * Added `Bot.getRooms` to obtain list of available rooms. (Pull req. #17 by Garret Heaton)
+  * No longer need to specify the `name` of the bot in `wobot.Bot`. (Pull req. #18 by Garret Heaton)
+  * Upon connecting, the bot will send the version it is running (or `caps_ver`) to the server. (Pull req. #16 by Garret Heaton)
+  * The behavior of a bot disconnecting when an error occurs can now be overwritten when `bot.on('error')`.
+
 0.4.0 / 2011-12-06
 ==================
 
