@@ -3,8 +3,7 @@ var Bot = require('../lib/').Bot;
 var b = new Bot({
   debug: true,
   jid: '?_?@chat.hipchat.com/bot',
-  password: '',
-  name: '???? ????'
+  password: ''
 });
 
 b.loadPlugin('chuckjokes', require('./plugins/chuckjokes'));
