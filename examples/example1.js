@@ -44,7 +44,3 @@ b.onMessage(function(channel, from, message) {
 b.onPrivateMessage(function(jid, message) {
   console.log(' -=- > ' + jid + ' pm\'d: ' + message);
 });
-
-process.on('uncaughtException', function (err) {
-  console.log('Caught exception: ' + err);
-});
