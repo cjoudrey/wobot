@@ -19,7 +19,9 @@ Instantiate the `wobot.Bot` class by passing it a hash containing:
 
   - `jid`: Jabber ID followed by `/bot`
   - `password`: The account's password
-  - Optional `host`: The hostname of the server.
+  - Optional `caps_ver`: Name and version of the bot. Defaults to `Wobot:x.x`.
+  - Optional `debug`: When set to `true`, XMPP traffic will be printed.
+  - Optional `host`: The hostname of the server. Defaults to `jid` host.
 
 ```javascript
 var wobot = require('wobot');
@@ -104,6 +106,16 @@ Example return value for `roster`:
   { name: 'The Bot', jid: '1111_12346@chat.hipchat.com' }
 ]
 ```
+
+## getRooms(callback)
+
+Fetches the rooms available to the bot user. This is equivalent to what
+would show up in the HipChat lobby.
+
+ - `callback`: Function to be triggered: `function (err, items, stanza)`
+   - `err`: Error condition (string) if any
+   - `rooms`: Array of objects containing room data
+   - `stanza`: Full response stanza, an `xmpp.Element`
 
 ## connect()
 Connect to the server.
