@@ -25,6 +25,11 @@ b.onConnect(function() {
   });
 });
 
+b.onInvite(function(roomJid, fromJid, reason) {
+  console.log(' -=- > Invite to ' + roomJid + ' by ' + fromJid + ': ' + reason);
+  this.join(roomJid);
+});
+
 b.onPing(function() {
   console.log(' -=- > Ping? Pong!');
 });

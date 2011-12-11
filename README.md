@@ -57,6 +57,11 @@ Emitted whenever a message is sent privately to the bot.
 
 `condition` can also be omitted i.e. `onPrivateMessage(callback)`.
 
+## onInvite(callback)
+Emitted whenever invited to a room.
+
+ - `callback` in the form of `function(roomJid, fromJid, reason)`.
+
 ## onPing(callback)
 Emitted everytime the bot pings the server (roughly every 30 seconds.)
 
