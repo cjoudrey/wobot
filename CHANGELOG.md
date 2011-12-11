@@ -1,3 +1,8 @@
+0.6.0 / 2011-12-17
+=================
+
+  * Added `Bot.onInvite` which is triggered whenever the bot is invited to a room. (Pull req. #21 by Garret Heaton)
+
 0.5.0 / 2011-12-10
 ==================
 
