@@ -26,7 +26,7 @@ b.onConnect(function() {
 });
 
 b.onInvite(function(roomJid, fromJid, reason) {
-  console.log(' -=- > Invite ' + roomJid + ' by ' + fromJid + ': ' + reason);
+  console.log(' -=- > Invite to ' + roomJid + ' by ' + fromJid + ': ' + reason);
   this.join(roomJid);
 });
 
