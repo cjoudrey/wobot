@@ -1,5 +1,10 @@
+0.7.0 / 2012-01-13
+==================
+
+  * Changed the `Bot.onError` arguments. They are now `condition, text, stanza`. (Pull req. #22 by Garret Heaton)
+
 0.6.0 / 2011-12-17
-=================
+==================
 
   * Added `Bot.onInvite` which is triggered whenever the bot is invited to a room. (Pull req. #21 by Garret Heaton)
 

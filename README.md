@@ -68,8 +68,9 @@ Emitted everytime the bot pings the server (roughly every 30 seconds.)
 ## onError(callback)
 Emitted whenever an error occurs. `disconnect` will be emitted afterwards.
 
- - `callback` in the form of `function(message[, stanza])`
-   - `message` is a string representation of the error.
+ - `callback` in the form of `function(condition, text, stanza)`
+   - `condition` is a string containing the XMPP stream error condition.
+   - `text` is a string containing a human-readable error message.
    - `stanza` is an instance of `xmpp.Element`, when available.
 
 ## onDisconnect(callback)
