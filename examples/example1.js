@@ -38,8 +38,8 @@ b.onDisconnect(function() {
   console.log(' -=- > Disconnect');
 });
 
-b.onError(function(error, stanza) {
-  console.log(' -=- > Error: ' + error);
+b.onError(function(error, text, stanza) {
+  console.log(' -=- > Error: ' + error + ' (' + text + ')');
 });
 
 b.onMessage(function(channel, from, message) {
