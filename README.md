@@ -80,10 +80,11 @@ Emitted whenever the bot disconnects from the server.
 
 Instances of `wobot.Bot` have the following methods:
 
-## join(roomJid)
+## join(roomJid, historyStanzas)
 Join a channel.
 
  - `roomJid` is in the following format: `????_????@conf.hipchat.com`.
+ - `historyStanzas`: Max number of history entries to request (default=0).
 
 ## part(roomJid)
 Part a channel.
