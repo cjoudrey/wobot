@@ -109,8 +109,8 @@ Example return value for `roster`:
 
 ```js
 [
-  { name: 'Christian Joudrey', jid: '1111_12345@chat.hipchat.com' },
-  { name: 'The Bot', jid: '1111_12346@chat.hipchat.com' }
+  { name: 'Christian Joudrey', jid: '1111_12345@chat.hipchat.com', mention_name: 'ChristianJoudrey' },
+  { name: 'The Bot', jid: '1111_12346@chat.hipchat.com', mention_name: 'TheBot' }
 ]
 ```
 
