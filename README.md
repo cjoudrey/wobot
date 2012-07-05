@@ -107,7 +107,7 @@ Fetches the roster (buddy list).
 
 Example return value for `roster`:
 
-```json
+```js
 [
   { name: 'Christian Joudrey', jid: '1111_12345@chat.hipchat.com' },
   { name: 'The Bot', jid: '1111_12346@chat.hipchat.com' }
