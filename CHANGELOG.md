@@ -1,3 +1,10 @@
+0.8.0 / 2012-07-05
+==================
+
+  * Added `mention_name` to each entry returned by `Bot.getRoster`. (Pull req. #25 by Garret Heaton)
+  * Added `mention_name` to `Bot` to obtain the mention name of the bot. (Pull req. #25 by Garret Heaton)
+  * Added `historyStanzas` argument to `Bot.join` to specify the max amount history entries to request. (Pull req. #23 by Garret Heaton)
+
 0.7.0 / 2012-01-13
 ==================
 
