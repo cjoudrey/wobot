@@ -1,3 +1,8 @@
+0.8.1 / 2013-10-16
+==================
+
+  * Fixed a crash related to the keep-alive ping. (Pull req. #33 by Josh Goodwin)
+
 0.8.0 / 2012-07-05
 ==================
 
