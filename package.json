@@ -2,19 +2,22 @@
   "name": "wobot",
   "version": "0.8.1",
   "description": "A plugin-based HipChat bot.",
-  "keywords": ["bot", "hipchat"],
+  "keywords": [
+    "bot",
+    "hipchat"
+  ],
   "homepage": "http://github.com/cjoudrey/wobot",
   "author": "Christian Joudrey <cmallette@gmail.com> (http://twitter.com/cjoudrey)",
   "repository": {
-    "type":"git",
-    "url":"git://github.com/cjoudrey/wobot"
+    "type": "git",
+    "url": "git://github.com/cjoudrey/wobot"
   },
   "dependencies": {
-    "node-xmpp": ">= 0.2.7",
-    "underscore": ">= 1.1.6"
+    "node-xmpp": "^1.0.0-alpha2",
+    "underscore": "^1.8.3"
   },
   "main": "lib/index.js",
   "engines": {
-    "node": ">= 0.4.1 < 0.7.0"
+    "node": ">= 0.10.38 < 0.12.4"
   }
 }
